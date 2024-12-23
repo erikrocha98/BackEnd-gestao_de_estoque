@@ -1,0 +1,12 @@
+{
+  "name": "gestao_de_estoque",
+  "version": "1.0.0",
+  "description": "Projeto de capacitação backend da empresa júnior iJunior, utilizando Nodejs e arquitetura MVC.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
