@@ -1,8 +1,11 @@
 {
     "compilerOptions": {
-        "target": "es5",
+        "target": "ES6",
         "module": "CommonJS",
         "rootDir": "./",
-        "outDir": "./"
+        "outDir": "./dist",
+        "strict": true,
+        "esModuleInterop": true, // Permite trabalhar com imports padrão e compatibilidade entre CommonJS e ESModules
+        "skipLibCheck": true     // Evita conflitos de tipagem em bibliotecas externas
     }
 }
