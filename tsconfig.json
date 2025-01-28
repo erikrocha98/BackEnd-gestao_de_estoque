@@ -1,11 +1,19 @@
 {
     "compilerOptions": {
-        "target": "ES6",
-        "module": "CommonJS",
-        "rootDir": "./",
-        "outDir": "./dist",
-        "strict": true,
-        "esModuleInterop": true, // Permite trabalhar com imports padrão e compatibilidade entre CommonJS e ESModules
-        "skipLibCheck": true     // Evita conflitos de tipagem em bibliotecas externas
-    }
-}
+      "baseUrl": "./",
+      "target": "ES6",
+      "module": "commonjs",
+      "rootDir": "./",
+      "outDir": "./dist",
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "resolveJsonModule": true,
+      "paths": {
+        "@models/*": ["src/models/*"],
+        "@services/*": ["src/services/*"]
+      }
+    },
+    "include": ["**/*"],
+    "exclude": ["node_modules"]
+  }
