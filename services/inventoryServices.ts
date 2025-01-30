@@ -25,13 +25,22 @@ export class InventoryService{
         const inventory= this.model.readInventory();
         return !inventory.some((item)=>item.name===name);
     }
-
+    
     public addItem(item: Item):void{
         this.validateItem(item);
         if (!this.isUnique(item.name)){
             throw new Error("O item já existe no inventário");
         }
         this.model.addItem(item);
+    }
+
+    public removeItem(id:string):void{
+        const inventory = this.model.readInventory();
+        if (!inventory.find(item=>item.name===id)){
+            throw new Error("O item a ser excluído não foi encontrado");
+        }
+        console.log(`Removendo item: ${id}`)
+        this.model.removeItem(id);
     }
 
 }
