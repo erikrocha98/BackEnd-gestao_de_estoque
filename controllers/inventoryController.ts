@@ -32,5 +32,13 @@ export const getItems = (req: Request, res:Response): void =>{
     } catch (error:any) {
         res.status(400).send({error: error.message});
     }
+};
+export const getTotalValue = (req:Request,res:Response):void=>{
+    try {
+        const totalValue=service.getTotalValue();
+        res.status(200).json(totalValue);
+    } catch (error:any) {
+        res.status(400).send({error:error.message});
+    }
 }
 

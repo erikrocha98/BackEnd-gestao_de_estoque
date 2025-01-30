@@ -53,5 +53,12 @@ export class InventoryModel{
     public getItems():Item[]{
         const rows = this.readInventory();
         return rows;
-    }
+    };
+    public getTotalValue(): number[]{
+        const rows = this.readInventory();
+        const parcialValue = rows.map((row)=>{
+            return row.quantity*row.price;
+        })
+        return parcialValue;
+    };
 }

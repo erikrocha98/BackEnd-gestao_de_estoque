@@ -43,5 +43,10 @@ class InventoryService {
         console.log("Exibindo items...");
         return this.model.getItems();
     }
+    getTotalValue() {
+        console.log("Exibindo valor total...");
+        const total = this.model.getTotalValue().reduce((soma, num_atual) => soma + num_atual, 0);
+        return new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(total);
+    }
 }
 exports.InventoryService = InventoryService;

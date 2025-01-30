@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getItems = exports.removeItem = exports.addItem = void 0;
+exports.getTotalValue = exports.getItems = exports.removeItem = exports.addItem = void 0;
 const inventoryServices_1 = require("../services/inventoryServices");
 const service = new inventoryServices_1.InventoryService();
 const addItem = (req, res) => {
@@ -36,3 +36,13 @@ const getItems = (req, res) => {
     }
 };
 exports.getItems = getItems;
+const getTotalValue = (req, res) => {
+    try {
+        const totalValue = service.getTotalValue();
+        res.status(200).json(totalValue);
+    }
+    catch (error) {
+        res.status(400).send({ error: error.message });
+    }
+};
+exports.getTotalValue = getTotalValue;

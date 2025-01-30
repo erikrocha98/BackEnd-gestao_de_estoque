@@ -48,5 +48,14 @@ class InventoryModel {
         const rows = this.readInventory();
         return rows;
     }
+    ;
+    getTotalValue() {
+        const rows = this.readInventory();
+        const parcialValue = rows.map((row) => {
+            return row.quantity * row.price;
+        });
+        return parcialValue;
+    }
+    ;
 }
 exports.InventoryModel = InventoryModel;

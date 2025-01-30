@@ -11,6 +11,7 @@ app.use(body_parser_1.default.json());
 app.post("/inventory", inventoryController_1.addItem);
 app.delete("/inventory", inventoryController_1.removeItem);
 app.get("/inventory", inventoryController_1.getItems);
+app.get("/inventory/getTotalValue", inventoryController_1.getTotalValue);
 app.listen(3000, () => {
     console.log("Servidor rodando na porta 3000");
 });
