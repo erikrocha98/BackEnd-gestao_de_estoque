@@ -24,5 +24,13 @@ export const removeItem = (req: Request, res: Response): void =>{
         res.status(400).send({error:error.message});
         
     }
+};
+export const getItems = (req: Request, res:Response): void =>{
+    try {
+        const items = service.getItems();
+        res.status(200).json(items);
+    } catch (error:any) {
+        res.status(400).send({error: error.message});
+    }
 }
 

@@ -50,4 +50,8 @@ export class InventoryModel{
         });
         this.writeInventory(filteredRows);     
     };
+    public getItems():Item[]{
+        const rows = this.readInventory();
+        return rows;
+    }
 }

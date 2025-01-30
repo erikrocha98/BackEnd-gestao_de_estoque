@@ -10,6 +10,7 @@ const app = (0, express_1.default)();
 app.use(body_parser_1.default.json());
 app.post("/inventory", inventoryController_1.addItem);
 app.delete("/inventory", inventoryController_1.removeItem);
+app.get("/inventory", inventoryController_1.getItems);
 app.listen(3000, () => {
     console.log("Servidor rodando na porta 3000");
 });

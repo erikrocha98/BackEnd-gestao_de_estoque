@@ -42,5 +42,9 @@ export class InventoryService{
         console.log(`Removendo item: ${id}`)
         this.model.removeItem(id);
     }
+    public getItems():Item[]{
+        console.log("Exibindo items...");
+        return this.model.getItems();
+    }
 
 }

@@ -44,5 +44,9 @@ class InventoryModel {
         this.writeInventory(filteredRows);
     }
     ;
+    getItems() {
+        const rows = this.readInventory();
+        return rows;
+    }
 }
 exports.InventoryModel = InventoryModel;
