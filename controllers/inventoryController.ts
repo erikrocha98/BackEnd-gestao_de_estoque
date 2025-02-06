@@ -40,5 +40,45 @@ export const getTotalValue = (req:Request,res:Response):void=>{
     } catch (error:any) {
         res.status(400).send({error:error.message});
     }
+};
+export const getTotalWeight = (req:Request, res:Response):void=>{
+    try {
+        const totalValue=service.getTotalWeight();
+        res.status(200).json(totalValue);
+    } catch (error:any) {
+        res.status(400).send({error:error.message});
+    }
+};
+export const getMeanValue = (req:Request, res:Response): void =>{
+    try {
+        const result = service.getMeanValue();
+        res.status(200).json(result);
+    } catch (error:any) {
+        res.status(400).send({error:error.message});
+    }
+};
+export const getMeanWeight = (req:Request,res:Response):void=>{
+    try {
+        const result = service.getMeanWeight();
+        res.status(200).json(result);
+    } catch (error:any) {
+        res.status(400).send({error:error.message});
+    }
+};
+export const getTotalItems=(req:Request,res:Response): void =>{
+    try {
+        const result = service.getTotalItems();
+        res.status(200).json(result);
+    } catch (error:any) {
+        res.status(400).send({error:error.message});
+    }
+};
+export const getTotalProducts=(req:Request,res:Response):void => {
+    try {
+        const result = service.getoTotalProducts();
+        res.status(200).json(result);
+    } catch (error:any) {
+        res.status(400).send({error:error.message});
+    }
 }
 
